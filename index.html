@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Mr+Bedfort&family=Mrs+Sheppards&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-fade">
+
+    <header class="main-header header-fade">
+        <div class="header-content">
+            <div class="branding">
+                <img src="images/signature/chelle_signature-transparent-cropped.png" alt="Chelle Palassis signature" class="site-signature">
+                <p>Illustrator &amp; Visual Artist</p>
+            </div>
+            <nav>
+                <a href="index.html">Work</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="gallery-container page-fade">
+    <div class="gallery-item fade-in-cascade" onclick="openLightbox(0)">
+        <img src="images/medium/artwork01-800.jpg" alt="Artwork 01">
+        <div class="overlay"></div>
+    </div>
+    <div class="gallery-item fade-in-cascade" onclick="openLightbox(1)">
+        <img src="images/medium/artwork02-800.jpg" alt="Artwork 02">
+        <div class="overlay"></div>
+    </div>
+    <div class="gallery-item fade-in-cascade" onclick="openLightbox(2)">
+        <img src="images/medium/artwork03-800.jpg" alt="Artwork 03">
+        <div class="overlay"></div>
+    </div>
+    <div class="gallery-item fade-in-cascade" onclick="openLightbox(3)">
+        <img src="images/medium/artwork04-800.jpg" alt="Artwork 04">
+        <div class="overlay"></div>
+    </div>
+    <div class="gallery-item fade-in-cascade" onclick="openLightbox(4)">
+        <img src="images/medium/artwork05-800.jpg" alt="Artwork 05">
+        <div class="overlay"></div>
+    </div>
+    <div class="gallery-item fade-in-cascade" onclick="openLightbox(5)">
+        <img src="images/medium/artwork06-800.jpg" alt="Artwork 06">
+        <div class="overlay"></div>
+    </div>
+    <div class="gallery-item fade-in-cascade" onclick="openLightbox(6)">
+        <img src="images/medium/artwork07-800.jpg" alt="Artwork 07">
+        <div class="overlay"></div>
+    </div>
+    <div class="gallery-item fade-in-cascade" onclick="openLightbox(7)">
+        <img src="images/medium/artwork08-800.jpg" alt="Artwork 08">
+        <div class="overlay"></div>
+    </div>
+    <div class="gallery-item fade-in-cascade" onclick="openLightbox(8)">
+        <img src="images/medium/artwork09-800.jpg" alt="Artwork 09">
+        <div class="overlay"></div>
+    </div>
+    <div class="gallery-item fade-in-cascade" onclick="openLightbox(9)">
+        <img src="images/medium/artwork10-800.jpg" alt="Artwork 10">
+        <div class="overlay"></div>
+    </div>
+    <div class="gallery-item fade-in-cascade" onclick="openLightbox(10)">
+        <img src="images/medium/artwork11-800.jpg" alt="Artwork 11">
+        <div class="overlay"></div>
+    </div>
+    <div class="gallery-item fade-in-cascade" onclick="openLightbox(11)">
+        <img src="images/medium/artwork12-800.jpg" alt="Artwork 12">
+        <div class="overlay"></div>
+    </div>
+</main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Expanded View">
+        </div>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
