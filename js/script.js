@@ -13,8 +13,37 @@ function setActiveNav() {
     });
 }
 
+function setupMobileNav() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.querySelector('.site-nav');
+
+    if (!navToggle || !siteNav) return;
+
+    navToggle.addEventListener('click', () => {
+        const isOpen = siteNav.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    siteNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            siteNav.classList.remove('is-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 640) {
+            siteNav.classList.remove('is-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+}
+
 // Run on page load
-document.addEventListener('DOMContentLoaded', setActiveNav);
+document.addEventListener('DOMContentLoaded', () => {
+    setActiveNav();
+    setupMobileNav();
+});
 
 const images = [
     "images/large/artwork01-1600.jpg",
